@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)"> 
-    <title>Fruits&Veggies*BIO</title>
-
+    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)">
+    <title>About - Fresh Market</title>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="Fruits.html">Fruits</a></li>
-            <li><a href="Legume.html">Veggies</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="fruit.html">Fruits</a></li>
+            <li><a href="legume.html">Veggies</a></li>
+            <li><a href="about.html" class="active">About</a></li>
         </ul>
         <button class="login-btn" id="loginBtn">Log-In</button>
     </nav>
- 
-<!-- Bannière avec logo cliquable -->
+
+    <!-- Bannière avec logo cliquable -->
     <header class="banner">
         <div class="company-image">
             <img src="media/picture/company-banner.jpg" alt="Company Banner">
@@ -31,6 +29,39 @@
             <img src="media/picture/logo.png" alt="Logo">
             <span class="logo-text">LOGO</span>
         </a>
+    </header>
+
+    <!-- Contenu About -->
+    <main class="about-content">
+        <section class="about-section">
+            <h1>À propos de Fresh Market</h1>
+            
+            <div class="about-image">
+                <img src="media/picture/company-about.jpg" alt="Notre entreprise">
+            </div>
+
+            <div class="about-text">
+                <h2>Notre Histoire</h2>
+                <p>Depuis 1995, Fresh Market s'engage à fournir les fruits et légumes les plus frais et de la meilleure qualité à nos clients. Notre passion pour les produits locaux et de saison nous distingue.</p>
+
+                <h2>Notre Mission</h2>
+                <p>Nous croyons en une alimentation saine et durable. Nous travaillons directement avec des producteurs locaux pour garantir la fraîcheur de nos produits tout en soutenant l'économie locale et en réduisant notre empreinte carbone.</p>
+
+                <h2>Nos Valeurs</h2>
+                <ul>
+                    <li><strong>Qualité :</strong> Sélection rigoureuse de chaque produit</li>
+                    <li><strong>Fraîcheur :</strong> Livraison quotidienne depuis nos producteurs</li>
+                    <li><strong>Durabilité :</strong> Engagement pour l'environnement</li>
+                    <li><strong>Transparence :</strong> Traçabilité complète de nos produits</li>
+                </ul>
+
+                <h2>Notre Équipe</h2>
+                <p>Une équipe passionnée de 50 collaborateurs dévoués à vous offrir la meilleure expérience d'achat de produits frais. Du choix des produits à la livraison, nous sommes là pour vous.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pop-in Login (identique à index.html) -->
     <div class="login-overlay" id="loginOverlay">
         <div class="login-popup">
             <button class="close-btn" id="closeBtn">&times;</button>
@@ -76,7 +107,5 @@
             loginOverlay.classList.remove('active');
         });
     </script>
-    </header>
-
 </body>
 </html>
