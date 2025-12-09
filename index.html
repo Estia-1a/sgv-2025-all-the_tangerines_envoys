@@ -1,115 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)"> 
-    <title>Fruits&Veggies*BIO</title>
+        <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
+        <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)"> 
+        <title>Fruits&Veggies*BIO</title>
 
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Fruits.html">Fruits</a></li>
-            <li><a href="Legume.html">Veggies</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-        <button class="login-btn" id="loginBtn">Log-In</button>
-    </nav>
+    </head>
+    <body>
+                        <!-- Navigation -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Fruits.html">Fruits</a></li>
+                <li><a href="Legume.html">Veggies</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="login-btn" id="loginBtn">Log-In</button>
+        </nav>
  
-<!-- Bannière avec logo cliquable -->
-    <header class="banner">
-        <div class="company-image">
-            <img src="media/picture/company-banner.jpg" alt="Company Banner">
-            <span class="banner-text">Company image</span>
-        </div>
-        <a href="index.html" class="logo-container">
-            <img src="media/picture/logo.png" alt="Logo">
-            <span class="logo-text">LOGO</span>
-        </a>
-    <div class="login-overlay" id="loginOverlay">
-        <div class="login-popup">
-            <button class="close-btn" id="closeBtn">&times;</button>
-            <h2>Connexion</h2>
-            <form class="login-form">
-                <div class="form-group">
-                    <label for="username">Identifiant</label>
-                    <input type="text" id="username" placeholder="Votre identifiant" required>
+                <!-- Bannière avec logo cliquable -->
+        <header class="banner">
+            <div class="company-image">
+                <img src="media/picture/company-banner.jpg" alt="Company Banner">
+                <span class="banner-text">Company image</span>
+            </div>
+            <a href="index.html" class="logo-container">
+                <img src="media/picture/logo.png" alt="Logo">
+                <span class="logo-text">LOGO</span>
+            </a>
+            <div class="login-overlay" id="loginOverlay">
+                <div class="login-popup">
+                    <button class="close-btn" id="closeBtn">&times;</button>
+                    <h2>Connexion</h2>
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="username">Identifiant</label>
+                            <input type="text" id="username" placeholder="Votre identifiant" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" id="password" placeholder="Votre mot de passe" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Se connecter</button>
+                        <a href="#" class="forgot-link">Mot de passe oublié ?</a>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" id="password" placeholder="Votre mot de passe" required>
-                </div>
-                <button type="submit" class="submit-btn">Se connecter</button>
-                <a href="#" class="forgot-link">Mot de passe oublié ?</a>
-            </form>
-        </div>
-    </div>
+            </div>
 
-    <script>
-        // Gestion du pop-in de login
-        const loginBtn = document.getElementById('loginBtn');
-        const loginOverlay = document.getElementById('loginOverlay');
-        const closeBtn = document.getElementById('closeBtn');
+            <script>
+                        // Gestion du pop-in de login + Code "Compte Fictif"
+                const loginBtn = document.getElementById('loginBtn');
+                const loginOverlay = document.getElementById('loginOverlay');
+                const closeBtn = document.getElementById('closeBtn');
 
-        loginBtn.addEventListener('click', () => {
-            loginOverlay.classList.add('active');
-        });
+                loginBtn.addEventListener('click', () => {
+                loginOverlay.classList.add('active');
+                });
 
-        closeBtn.addEventListener('click', () => {
-            loginOverlay.classList.remove('active');
-        });
-
-        loginOverlay.addEventListener('click', (e) => {
-            if (e.target === loginOverlay) {
+                closeBtn.addEventListener('click', () => {
                 loginOverlay.classList.remove('active');
-            }
-        });
+                });
 
-        document.querySelector('.login-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Connexion fictive - Identifiant et mot de passe acceptés');
-            loginOverlay.classList.remove('active');
-        });
-    </script>
+                loginOverlay.addEventListener('click', (e) => {
+                if (e.target === loginOverlay) {
+                loginOverlay.classList.remove('active');
+                }
+                });
+
+                document.querySelector('.login-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Connexion fictive - Identifiant et mot de passe acceptés');
+                loginOverlay.classList.remove('active');
+                });
+            </script>
 
 
-    </header>
+        </header>
 
-    <div class="container"> <!-- Boutons vers pages -->
+        <div class="container"> <!-- Boutons vers pages -->
 
-        <div class="legume-card">
-            <a href="Fruits.html">
-                <img src="media/pictures/HomepageFruits.jpg" alt="Clickable Fruits image" >
-            </a>
-            <div class="overlay">
-                <p> Fruits </p>
+            <div class="legume-card">
+                <a href="Fruits.html">
+                    <img src="media/pictures/HomepageFruits.jpg" alt="Clickable Fruits image" >
+                </a>
+                <div class="overlay">
+                    <p> Fruits </p>
+                </div>
             </div>
-        </div>
 
-        <div class="legume-card">
-            <a href="about.html">
-                <img src="media/pictures/HomepageVueAerienne.jpg" alt="Clickable about image">
-            </a>
-            <div class="overlay">
-                <p> About </p>
+            <div class="legume-card">
+                <a href="about.html">
+                    <img src="media/pictures/HomepageVueAerienne.jpg" alt="Clickable about image">
+                </a>
+                <div class="overlay">
+                    <p> About </p>
+                </div>
             </div>
-        </div>
 
-        <div class="legume-card">
-            <a href="Legume.html">
-                <img src="media/pictures/HompageVeggies.jpg" alt="Clickable image" >
-            </a>
-            <div class="overlay">
-                <p> Legumes </p>
+            <div class="legume-card">
+                <a href="Legume.html">
+                    <img src="media/pictures/HompageVeggies.jpg" alt="Clickable image" >
+                </a>
+                <div class="overlay">
+                    <p> Legumes </p>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 
 </body>
 </html>
