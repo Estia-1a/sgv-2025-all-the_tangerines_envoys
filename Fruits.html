@@ -7,49 +7,116 @@
     <title>Page des Fruits</title>
 </head>
 <body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Fruits.html">Fruits</a></li>
+            <li><a href="Legume.html">Veggies</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <button class="login-btn" id="loginBtn">Log-In</button>
+    </nav>
+ 
+<!-- Bannière avec logo cliquable -->
+    <header class="banner">
+        <div class="company-image">
+            <img src="media/picture/company-banner.jpg" alt="Company Banner">
+            <span class="banner-text">Company image</span>
+        </div>
+        <a href="index.html" class="logo-container">
+            <img src="media/picture/logo.png" alt="Logo">
+            <span class="logo-text">LOGO</span>
+        </a>
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-popup">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <h2>Connexion</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">Identifiant</label>
+                    <input type="text" id="username" placeholder="Votre identifiant" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="Votre mot de passe" required>
+                </div>
+                <button type="submit" class="submit-btn">Se connecter</button>
+                <a href="#" class="forgot-link">Mot de passe oublié ?</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Gestion du pop-in de login
+        const loginBtn = document.getElementById('loginBtn');
+        const loginOverlay = document.getElementById('loginOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        loginBtn.addEventListener('click', () => {
+            loginOverlay.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            loginOverlay.classList.remove('active');
+        });
+
+        loginOverlay.addEventListener('click', (e) => {
+            if (e.target === loginOverlay) {
+                loginOverlay.classList.remove('active');
+            }
+        });
+
+        document.querySelector('.login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Connexion fictive - Identifiant et mot de passe acceptés');
+            loginOverlay.classList.remove('active');
+        });
+    </script>
+    </header>
+
     <h1>Nos Fruits</h1>
     
     <div class="container">
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\pomme.jpg" alt="Pomme">
+            <img src="Image Fruits/pomme.jpg" alt="Pomme">
             <div class="overlay">
                 <p>Prix : 2.4 €/kg </p>
                 <p>Quantité : 23 kg</p>
-                <p><a href="https://www.santemagazine.fr/alimentation/aliments-et-sante/fruits/les-bonnes-raisons-de-manger-des-pommes-266009"> Bienfait de la Pomme</ahref></a></p>
+                <p><a href="https://www.santemagazine.fr/alimentation/aliments-et-sante/fruits/les-bonnes-raisons-de-manger-des-pommes-266009"> <strong>Bienfait de la Pomme</strong></ahref></a></p>
 
             </div>
         </div>
 
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\poire.jpg" alt="Poire">
+            <img src="Image Fruits/poire.jpg" alt="Poire">
             <div class="overlay">
                 <p>Prix : 1.25 €/kg </p>
                 <p>Quantité : 16 kg</p>
-                <p><a href="https://www.20minutes.fr/tempo/food/4104835-20240807-bienfaits-poire"> Bienfait de la Poire</ahref></a></p>
+                <p><a href="https://www.20minutes.fr/tempo/food/4104835-20240807-bienfaits-poire"> <strong>Bienfait de la Poire</strong></ahref></a></p>
                 
             </div>
         </div>
 
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\Fruit de la passion.webp" alt="Fruit de la Passion">
+            <img src="Image Fruits/Fruit de la passion.webp" alt="Fruit de la Passion">
             <div class="overlay">
                 <p>Prix : 6.68 €/kg </p>
                 <p>Quantité : 9kg</p>
-                <p><a href="https://www.holmesplace.ch/fr/blog/nutrition/un-superaliment-en-vedette-le-fruit-de-la-passion#:~:text=A%20vrai%20dire%2C%20la%20liste,efficace%20en%20cas%20d'asthme."> Bienfait du fruit de la passion</ahref></a></p>
+                <p><a href="https://www.holmesplace.ch/fr/blog/nutrition/un-superaliment-en-vedette-le-fruit-de-la-passion#:~:text=A%20vrai%20dire%2C%20la%20liste,efficace%20en%20cas%20d'asthme."> <strong>Bienfait du fruit de la passion</strong></ahref></a></p>
             </div>
         </div>
 
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\NOIX_DE_COCO.webp" alt="Noix de Coco">
+            <img src="Image Fruits/NOIX_DE_COCO.webp" alt="Noix de Coco">
             <div class="overlay">
                 <p>Prix : 1.40 €/u </p>
                 <p>Quantité : 42 noix de coco</p>
-                <p><a href="https://www.chicdesplantes.fr/blogs/gazette-botanique/connaissez-vous-tous-les-bienfaits-de-la-noix-de-coco"> Bienfait du coco</ahref></a></p>
+                <p><a href="https://www.chicdesplantes.fr/blogs/gazette-botanique/connaissez-vous-tous-les-bienfaits-de-la-noix-de-coco"> <strong>Bienfait du coco</strong></ahref></a></p>
             </div>
         </div>
 
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\fruit du dragon.jpeg" alt="Fruit du dragon">
+            <img src="Image Fruits/fruit du dragon.jpeg" alt="Fruit du dragon">
             <div class="overlay">
                 <p>Prix : 12 €/kg </p>
                 <p>Quantité : 6 kg</p>
@@ -58,7 +125,7 @@
         </div>
 
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\ananas.jpg" alt="Ananas">
+            <img src="Image Fruits/ananas.jpg" alt="Ananas">
             <div class="overlay">
                 <p>Prix : 2.5 €/kg </p>
                 <p>Quantité : 17 kg</p>
@@ -76,7 +143,7 @@
         </div>
 
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\madarine.jpg" alt="Mandarine">
+            <img src="Image Fruits/madarine.jpg" alt="Mandarine">
             <div class="overlay">
                 <p>Prix : 2.99 €/kg </p>
                 <p>Quantité : 22 kg</p>
@@ -86,7 +153,7 @@
         </div>
 
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\banane.jpg" alt="Banane">
+            <img src="Image Fruits/banane.jpg" alt="Banane">
             <div class="overlay">
                 <p>Prix : 1.40 €/kg </p>
                 <p>Quantité : 30 kg</p>
@@ -96,7 +163,7 @@
         </div>
 
         <div class="legume-card">
-            <img src="c:\Users\zachary.put\OneDrive - ESTIA\Bureau\Documents\Document Zack\1ere année\sgv-2025-all-the_tangerines_envoys\Image Fruits\mangue.jpg" alt="Mangue">
+            <img src="Image Fruits/mangue.jpg" alt="Mangue">
             <div class="overlay">
                 <p>Prix : 4.80 €/kg </p>
                 <p>Quantité : 8 kg</p>
