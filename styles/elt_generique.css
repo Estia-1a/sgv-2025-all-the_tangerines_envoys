@@ -4,144 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f5f7fa;
     min-height: 100vh;
 }
 
-/* ===== TITRE ===== */
-h1 {
-    text-align: center;
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 50px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
-}
-
-/* ===== CONTAINER GRILLE ===== */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 20px;
-}
-
-/* ===== CARTE LÉGUME ===== */
-.legume-card {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.legume-card:hover {
-    transform: translateY(-10px) scale(1.05);
-}
-
-/* ===== IMAGE ===== */
-.legume-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.legume-card:hover img {
-    transform: scale(1.1);
-}
-
-/* ===== OVERLAY (TEXTE AU SURVOL) ===== */
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.85);
-    color: rgb(106, 83, 98);
-    padding: 20px;
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-}
-
-.legume-card:hover .overlay {
-    transform: translateY(0);
-}
-
-.overlay p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    text-align: center;
-}
-
-/* ===== BOUTON ===== */
-.button-container {
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background: white;
-    color: #667eea;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background: #892f83;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* ===== RESPONSIVE (TABLETTE) ===== */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .overlay p {
-        font-size: 0.85rem;
-    }
-}
-
-/* ===== RESPONSIVE (MOBILE) ===== */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-    }
-    
-    .container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .legume-card {
-        max-width: 100%;
-    }
-}
- 
 /* ===== NAVIGATION ===== */
 .navbar {
     background: white;
@@ -155,7 +24,7 @@ h1 {
     z-index: 100;
     border-bottom: 1px solid rgba(137, 75, 138, 0.15);
 }
- 
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -163,11 +32,11 @@ h1 {
     padding: 0;
     margin: 0;
 }
- 
+
 .nav-links li {
     position: relative;
 }
- 
+
 .nav-links li a {
     text-decoration: none;
     color: #555;
@@ -180,7 +49,7 @@ h1 {
     position: relative;
     overflow: hidden;
 }
- 
+
 .nav-links li a::before {
     content: '';
     position: absolute;
@@ -193,28 +62,28 @@ h1 {
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 2px 2px 0 0;
 }
- 
+
 .nav-links li a:hover {
     color: #894b8a;
     background: rgba(137, 75, 138, 0.1);
     transform: translateY(-2px);
 }
- 
+
 .nav-links li a:hover::before {
     width: 80%;
 }
- 
+
 .nav-links li a.active {
     color: #894b8a;
     background: linear-gradient(135deg, rgba(137, 75, 138, 0.15), rgba(102, 126, 234, 0.15));
     font-weight: 700;
 }
- 
+
 .nav-links li a.active::before {
     width: 80%;
     background: linear-gradient(90deg, #894b8a, #667eea);
 }
- 
+
 .login-btn {
     padding: 12px 32px;
     background: linear-gradient(135deg, #894b8a 0%, #667eea 100%);
@@ -229,7 +98,7 @@ h1 {
     position: relative;
     overflow: hidden;
 }
- 
+
 .login-btn::before {
     content: '';
     position: absolute;
@@ -242,23 +111,23 @@ h1 {
     transform: translate(-50%, -50%);
     transition: width 0.6s, height 0.6s;
 }
- 
+
 .login-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(137, 75, 138, 0.4);
     background: linear-gradient(135deg, #9a5b9b 0%, #7680f0 100%);
 }
- 
+
 .login-btn:hover::before {
     width: 300px;
     height: 300px;
 }
- 
+
 .login-btn:active {
     transform: translateY(0);
     box-shadow: 0 2px 10px rgba(137, 75, 138, 0.3);
 }
- 
+
 /* ===== BANNIÈRE ===== */
 .banner {
     position: relative;
@@ -281,7 +150,7 @@ h1 {
     transform: translateY(-5px);
     box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(137, 75, 138, 0.15);
 }
- 
+
 .company-image {
     width: 100%;
     height: 100%;
@@ -302,7 +171,7 @@ h1 {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.1) 100%);
     z-index: 1;
 }
- 
+
 .company-image img {
     width: 100%;
     height: 100%;
@@ -316,7 +185,7 @@ h1 {
     transform: scale(1.02);
     opacity: 0.9;
 }
- 
+
 .banner-text {
     position: absolute;
     top: 50%;
@@ -348,90 +217,7 @@ h1 {
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
- 
-/* ===== CONTENU PRINCIPAL ===== */
-.main-content {
-    width: 90%;
-    max-width: 1400px;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
- 
-/* ===== CARTES CATÉGORIES ===== */
-.category-card {
-    background: white;
-    border: 3px solid #333;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
- 
-.category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
- 
-.category-card h2 {
-    border: 2px solid #333;
-    padding: 10px 30px;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-}
- 
-.category-image {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4/3;
-    border: 2px solid #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
- 
-.category-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.4;
-}
- 
-.image-label {
-    position: absolute;
-    font-size: 1rem;
-    color: #ffffff;
-    font-weight: 500;
-    z-index: 2;
-}
- 
-/* Effet croix sur les images */
-.category-image::before,
-.category-image::after {
-    content: '';
-    position: absolute;
-    background: #fffefe;
-    z-index: 1;
-}
- 
-.category-image::before {
-    width: 2px;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-}
- 
-.category-image::after {
-    width: 2px;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%) rotate(-45deg);
-}
- 
+
 /* ===== POP-IN LOGIN ===== */
 .login-overlay {
     position: fixed;
@@ -448,12 +234,12 @@ h1 {
     transition: opacity 0.3s ease;
     z-index: 1000;
 }
- 
+
 .login-overlay.active {
     opacity: 1;
     pointer-events: all;
 }
- 
+
 .login-popup {
     background: white;
     padding: 40px;
@@ -465,11 +251,11 @@ h1 {
     transform: scale(0.8);
     transition: transform 0.3s ease;
 }
- 
+
 .login-overlay.active .login-popup {
     transform: scale(1);
 }
- 
+
 .close-btn {
     position: absolute;
     top: 15px;
@@ -481,28 +267,28 @@ h1 {
     color: #666;
     transition: color 0.3s ease;
 }
- 
+
 .close-btn:hover {
     color: #333;
 }
- 
+
 .login-popup h2 {
     margin-bottom: 30px;
     text-align: center;
     color: #333;
 }
- 
+
 .form-group {
     margin-bottom: 20px;
 }
- 
+
 .form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
     color: #333;
 }
- 
+
 .form-group input {
     width: 100%;
     padding: 12px;
@@ -511,12 +297,12 @@ h1 {
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
- 
+
 .form-group input:focus {
     outline: none;
     border-color: #667eea;
 }
- 
+
 .submit-btn {
     width: 100%;
     padding: 12px;
@@ -529,11 +315,11 @@ h1 {
     cursor: pointer;
     transition: background 0.3s ease;
 }
- 
+
 .submit-btn:hover {
     background: #5568d3;
 }
- 
+
 .forgot-link {
     display: block;
     text-align: center;
@@ -542,89 +328,11 @@ h1 {
     text-decoration: none;
     font-size: 0.9rem;
 }
- 
+
 .forgot-link:hover {
     text-decoration: underline;
 }
- 
-/* ===== PAGE ABOUT ===== */
-.about-content {
-    width: 90%;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 40px;
-    background: white;
-    border: 3px solid #333;
-}
- 
-.about-section h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-}
- 
-.about-image {
-    width: 100%;
-    height: 400px;
-    margin-bottom: 40px;
-    border: 2px solid #333;
-    overflow: hidden;
-}
- 
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
- 
-.about-text h2 {
-    color: #667eea;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
- 
-.about-text p {
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
-    text-align: justify;
-}
- 
-.about-text ul {
-    list-style: none;
-    padding-left: 0;
-}
- 
-.about-text ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    color: #555;
-}
- 
-.about-text ul li:last-child {
-    border-bottom: none;
-}
- 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-    .main-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .category-card:last-child {
-        grid-column: span 2;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    .about-content {
-        padding: 30px;
-    }
-    .about-image {
-        height: 300px;
-    }
-}
- 
+
 /* ===== RESPONSIVE GENERIQUE (Navbar & Bannière) ===== */
 @media (max-width: 768px) {
     /* Navbar responsive */
@@ -668,13 +376,14 @@ h1 {
         padding: 12px 20px;
     }
     
-    /* Contenu principal responsive */
-    .main-content {
-        grid-template-columns: 1fr;
+    /* Login popup responsive */
+    .login-popup {
+        padding: 30px 20px;
     }
     
-    .category-card:last-child {
-        grid-column: span 1;
+    .login-popup h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
     }
 }
 
@@ -711,4 +420,19 @@ h1 {
         letter-spacing: 1.5px;
         padding: 10px 15px;
     }
+    
+    /* Login popup très petit écran */
+    .login-popup {
+        padding: 25px 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.95rem;
+    }
+    
+    .form-group input {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
 }
+

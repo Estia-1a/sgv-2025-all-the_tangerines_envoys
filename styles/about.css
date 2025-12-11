@@ -1,0 +1,141 @@
+/* ===== PAGE ABOUT ===== */
+.about-content {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    border: 3px solid #333;
+}
+
+.about-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.about-image {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 40px;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    color: #667eea;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-text ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.about-text ul li:last-child {
+    border-bottom: none;
+}
+
+.about-text ul li strong {
+    color: #894b8a;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .about-content {
+        padding: 30px;
+    }
+    .about-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        width: 95%;
+        padding: 25px;
+        margin: 30px auto;
+    }
+    
+    .about-section h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .about-image {
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    
+    .about-text h2 {
+        font-size: 1.3rem;
+        margin-top: 25px;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .about-text ul li {
+        font-size: 0.95rem;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        width: 98%;
+        padding: 15px;
+        margin: 20px auto;
+        border-width: 2px;
+    }
+    
+    .about-section h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .about-image {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .about-text h2 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+    
+    .about-text p,
+    .about-text ul li {
+        font-size: 0.9rem;
+    }
+    
+    .about-text ul li strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+

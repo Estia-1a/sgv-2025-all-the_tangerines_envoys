@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
-        <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)"> 
+        <link rel="stylesheet" href="styles/elt_generique.css">
+        <link rel="stylesheet" href="styles/index.css"> 
         <title>Fruits&Veggies*BIO</title>
         <nav class="navbar"> <!-- Navigation -->
             <ul class="nav-links">
@@ -71,33 +71,36 @@
     </head>
     <body>
 
-        <div class="container"> <!-- Boutons vers pages -->
+        <div class="main-content"> <!-- Boutons vers pages -->
 
-            <div class="legume-card">
+            <div class="category-card">
                 <a href="Fruits.html">
-                    <img src="media/pictures/HomepageFruits.jpg" alt="Clickable Fruits image" >
+                    <div class="category-image">
+                        <img src="media/pictures/HomepageFruits.jpg" alt="Clickable Fruits image">
+                        <span class="image-label">Fruits</span>
+                    </div>
                 </a>
-                <div class="overlay">
-                    <p> Fruits </p>
-                </div>
+                <h2>Fruits</h2>
             </div>
 
-            <div class="legume-card">
+            <div class="category-card">
                 <a href="about.html">
-                    <img src="media/pictures/HomepageVueAerienne.jpg" alt="Clickable about image">
+                    <div class="category-image">
+                        <img src="media/pictures/HomepageVueAerienne.jpg" alt="Clickable about image">
+                        <span class="image-label">About</span>
+                    </div>
                 </a>
-                <div class="overlay">
-                    <p> About </p>
-                </div>
+                <h2>About</h2>
             </div>
 
-            <div class="legume-card">
+            <div class="category-card">
                 <a href="Legume.html">
-                    <img src="media/pictures/HompageVeggies.jpg" alt="Clickable image" >
+                    <div class="category-image">
+                        <img src="media/pictures/HompageVeggies.jpg" alt="Clickable image">
+                        <span class="image-label">Légumes</span>
+                    </div>
                 </a>
-                <div class="overlay">
-                    <p> Legumes </p>
-                </div>
+                <h2>Légumes</h2>
             </div>
         </div>
 
