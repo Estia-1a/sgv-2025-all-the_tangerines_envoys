@@ -1,0 +1,391 @@
+/* ===== RESET & BASE MOBILE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    min-height: 100vh;
+}
+
+/* ===== NAVIGATION MOBILE ===== */
+.navbar {
+    background: white;
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(137, 75, 138, 0.15);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #894b8a;
+    background: rgba(137, 75, 138, 0.1);
+}
+
+.nav-links li a.active {
+    color: #894b8a;
+    background: linear-gradient(135deg, rgba(137, 75, 138, 0.15), rgba(102, 126, 234, 0.15));
+    font-weight: 700;
+}
+
+.login-btn {
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #894b8a 0%, #667eea 100%);
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(137, 75, 138, 0.3);
+    margin-top: 8px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(137, 75, 138, 0.4);
+}
+
+/* ===== BANNIÈRE MOBILE ===== */
+.banner {
+    position: relative;
+    width: 98%;
+    margin: 20px auto;
+    height: 180px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(137, 75, 138, 0.08);
+    border: 1px solid rgba(137, 75, 138, 0.2);
+}
+
+.company-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.company-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 1;
+}
+
+.company-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    opacity: 0.8;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 800;
+    z-index: 3;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(0, 0, 0, 0.6),
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        -2px -2px 4px rgba(0, 0, 0, 0.9);
+    white-space: nowrap;
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== PAGE ABOUT MOBILE ===== */
+.about-content {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.about-section h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333;
+    line-height: 1.3;
+}
+
+.about-image {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 25px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    color: #667eea;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.about-text p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 18px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-text ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.about-text ul li:last-child {
+    border-bottom: none;
+}
+
+.about-text ul li strong {
+    color: #894b8a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ===== POP-IN LOGIN MOBILE ===== */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.login-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.login-popup {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.login-overlay.active .login-popup {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.login-popup h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #5568d3;
+}
+
+.forgot-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #667eea;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE TRÈS PETIT ÉCRAN ===== */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 12px;
+    }
+    
+    .nav-links li a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .login-btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .banner {
+        height: 150px;
+        margin: 15px auto;
+    }
+    
+    .banner-text {
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+        padding: 10px 15px;
+    }
+    
+    .about-content {
+        padding: 15px;
+        width: 98%;
+    }
+    
+    .about-section h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .about-image {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .about-text h2 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+    
+    .about-text p,
+    .about-text ul li {
+        font-size: 0.9rem;
+    }
+}
+
