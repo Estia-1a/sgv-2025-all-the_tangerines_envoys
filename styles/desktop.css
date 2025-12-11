@@ -1,17 +1,15 @@
 /* ===== RESET & BASE ===== */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ffffff 0%, #764ba2 100%);
+    background: #894b8a;
     min-height: 100vh;
-    padding: 20px;
 }
-
 
 /* ===== TITRE ===== */
 h1 {
@@ -142,19 +140,6 @@ h1 {
     .legume-card {
         max-width: 100%;
     }
-}
-
-/* ===== RESET & BASE ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #7f0e5d;
-    min-height: 100vh;
 }
  
 /* ===== NAVIGATION ===== */
@@ -356,7 +341,7 @@ body {
 .image-label {
     position: absolute;
     font-size: 1rem;
-    color: #333;
+    color: #ffffff;
     font-weight: 500;
     z-index: 2;
 }
@@ -366,7 +351,7 @@ body {
 .category-image::after {
     content: '';
     position: absolute;
-    background: #666;
+    background: #fffefe;
     z-index: 1;
 }
  
