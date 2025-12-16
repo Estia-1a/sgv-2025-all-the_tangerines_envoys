@@ -1,4 +1,4 @@
-/* ===== RESET & BASE MOBILE ===== */
+/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +11,14 @@ body {
     min-height: 100vh;
 }
 
-/* ===== NAVIGATION MOBILE ===== */
+/* ===== NAVIGATION ===== */
 .navbar {
     background: white;
-    padding: 12px 15px;
+    padding: 18px 60px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -28,29 +27,50 @@ body {
 
 .nav-links {
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
-    gap: 5px;
+    gap: 8px;
     padding: 0;
     margin: 0;
-    justify-content: center;
-    width: 100%;
+}
+
+.nav-links li {
+    position: relative;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: #555;
     font-weight: 600;
-    font-size: 0.85rem;
-    padding: 8px 14px;
+    font-size: 1rem;
+    padding: 12px 24px;
     border-radius: 8px;
     display: block;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #894b8a, #667eea);
+    transform: translateX(-50%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px 2px 0 0;
 }
 
 .nav-links li a:hover {
     color: #894b8a;
     background: rgba(137, 75, 138, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-links li a:hover::before {
+    width: 80%;
 }
 
 .nav-links li a.active {
@@ -59,39 +79,76 @@ body {
     font-weight: 700;
 }
 
+.nav-links li a.active::before {
+    width: 80%;
+    background: linear-gradient(90deg, #894b8a, #667eea);
+}
+
 .login-btn {
-    padding: 10px 24px;
+    padding: 12px 32px;
     background: linear-gradient(135deg, #894b8a 0%, #667eea 100%);
     border: none;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    border-radius: 30px;
+    font-size: 1rem;
     font-weight: 600;
     color: white;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(137, 75, 138, 0.3);
-    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
 }
 
 .login-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(137, 75, 138, 0.4);
+    background: linear-gradient(135deg, #9a5b9b 0%, #7680f0 100%);
 }
 
-/* ===== BANNIÈRE MOBILE ===== */
+.login-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.login-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(137, 75, 138, 0.3);
+}
+
+/* ===== BANNIÈRE ===== */
 .banner {
     position: relative;
-    width: 98%;
-    margin: 20px auto;
-    height: 180px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    height: 280px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border-radius: 12px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(137, 75, 138, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 25px rgba(137, 75, 138, 0.1);
     border: 1px solid rgba(137, 75, 138, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(137, 75, 138, 0.15);
 }
 
 .company-image {
@@ -121,6 +178,12 @@ body {
     object-fit: cover;
     object-position: center bottom;
     opacity: 0.8;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.banner:hover .company-image img {
+    transform: scale(1.02);
+    opacity: 0.9;
 }
 
 .banner-text {
@@ -128,10 +191,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     z-index: 3;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     color: white;
     text-shadow: 
@@ -139,87 +202,23 @@ body {
         0 0 40px rgba(0, 0, 0, 0.6),
         2px 2px 4px rgba(0, 0, 0, 0.9),
         -2px -2px 4px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease;
     white-space: nowrap;
-    padding: 12px 20px;
+    padding: 20px 40px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
-    border-radius: 12px;
+    border-radius: 15px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== PAGE ABOUT MOBILE ===== */
-.about-content {
-    width: 95%;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border: 2px solid #333;
-    border-radius: 10px;
+.banner:hover .banner-text {
+    transform: translate(-50%, -50%) scale(1.05);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
-.about-section h1 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    color: #333;
-    line-height: 1.3;
-}
-
-.about-image {
-    width: 100%;
-    height: 250px;
-    margin-bottom: 25px;
-    border: 2px solid #333;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.about-text h2 {
-    color: #667eea;
-    margin-top: 25px;
-    margin-bottom: 12px;
-    font-size: 1.3rem;
-}
-
-.about-text p {
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 18px;
-    text-align: left;
-    font-size: 0.95rem;
-}
-
-.about-text ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.about-text ul li {
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.about-text ul li:last-child {
-    border-bottom: none;
-}
-
-.about-text ul li strong {
-    color: #894b8a;
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* ===== POP-IN LOGIN MOBILE ===== */
+/* ===== POP-IN LOGIN ===== */
 .login-overlay {
     position: fixed;
     top: 0;
@@ -243,7 +242,7 @@ body {
 
 .login-popup {
     background: white;
-    padding: 30px 20px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     width: 90%;
@@ -274,14 +273,13 @@ body {
 }
 
 .login-popup h2 {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-align: center;
     color: #333;
-    font-size: 1.5rem;
 }
 
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
@@ -289,7 +287,6 @@ body {
     margin-bottom: 8px;
     font-weight: 500;
     color: #333;
-    font-size: 0.95rem;
 }
 
 .form-group input {
@@ -336,10 +333,69 @@ body {
     text-decoration: underline;
 }
 
-/* ===== RESPONSIVE TRÈS PETIT ÉCRAN ===== */
+/* ===== RESPONSIVE GENERIQUE (Navbar & Bannière) ===== */
+@media (max-width: 768px) {
+    /* Navbar responsive */
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .nav-links li a {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .login-btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+        width: auto;
+        margin-top: 0;
+    }
+    
+    /* Bannière responsive */
+    .banner {
+        width: 98%;
+        height: 180px;
+        margin: 20px auto;
+        border-radius: 12px;
+    }
+    
+    .banner-text {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        padding: 12px 20px;
+    }
+    
+    /* Login popup responsive */
+    .login-popup {
+        padding: 30px 20px;
+    }
+    
+    .login-popup h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+}
+
 @media (max-width: 480px) {
+    /* Navbar très petit écran */
     .navbar {
         padding: 10px 12px;
+        gap: 10px;
+    }
+    
+    .nav-links {
+        gap: 4px;
     }
     
     .nav-links li a {
@@ -352,9 +408,11 @@ body {
         font-size: 0.85rem;
     }
     
+    /* Bannière très petit écran */
     .banner {
         height: 150px;
         margin: 15px auto;
+        border-radius: 10px;
     }
     
     .banner-text {
@@ -363,29 +421,18 @@ body {
         padding: 10px 15px;
     }
     
-    .about-content {
-        padding: 15px;
-        width: 98%;
+    /* Login popup très petit écran */
+    .login-popup {
+        padding: 25px 15px;
     }
     
-    .about-section h1 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+    .form-group label {
+        font-size: 0.95rem;
     }
     
-    .about-image {
-        height: 200px;
-        margin-bottom: 20px;
-    }
-    
-    .about-text h2 {
-        font-size: 1.2rem;
-        margin-top: 20px;
-    }
-    
-    .about-text p,
-    .about-text ul li {
-        font-size: 0.9rem;
+    .form-group input {
+        padding: 10px;
+        font-size: 0.95rem;
     }
 }
 

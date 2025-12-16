@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)">
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="styles/elt_generique.css">
+    <link rel="stylesheet" href="styles/about.css">
     <title>About - Fresh Market</title>
 </head>
 <body>
-    <nav class="navbar">     <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="Fruits.html">Fruits</a></li>
@@ -18,18 +19,53 @@
         <button class="login-btn" id="loginBtn">Log-In</button>
     </nav>
 
-    <header class="banner">     <!-- Bannière avec logo cliquable -->
+    <!-- Bannière -->
+    <header class="banner">
         <div class="company-image">
-            <img src="media/picture/company-banner.jpg" alt="Company Banner">
-            <span class="banner-text">Company image</span>
+            <img src="media/pictures/Baniere3.jpg" alt="Company Banner">
+            <span class="banner-text">FRESH MARKET</span>
         </div>
-        <a href="index.html" class="logo-container">
-            <img src="media/picture/logo.png" alt="Logo">
-            <span class="logo-text">LOGO</span>
-        </a>
     </header>
 
-    <div class="login-overlay" id="loginOverlay">   <!-- Gestion du pop-in de login + Code "Compte Fictif"-->
+    <!-- Contenu About -->
+    <main class="about-content">
+        <section class="about-section">
+            <!-- Titre principal -->
+            <h1>À propos de Fresh Market</h1>
+            
+            <!-- Image de l'entreprise -->
+            <div class="about-image">
+                <img src="media/pictures/image_entreprise.jpg" alt="Notre entreprise">
+            </div>
+
+            <!-- Contenu textuel -->
+            <div class="about-text">
+                <!-- Section Histoire -->
+                <h2>Notre Histoire</h2>
+                <p>Depuis 1995, Fresh Market est né d'une conviction simple : l'accès à des fruits et légumes d'une qualité exceptionnelle doit être la norme. Notre histoire est celle d'une passion inébranlable pour le goût vrai et l'agriculture de proximité. Cet engagement historique auprès des produits locaux et de saison n'est pas un simple choix, c'est l'essence même qui nous distingue et qui a bâti la confiance de nos clients depuis plus d'un quart de siècle.</p>
+
+                <!-- Section Mission -->
+                <h2>Notre Mission</h2>
+                <p>Nous croyons qu'une alimentation saine et durable est essentielle pour l'avenir. Pour y parvenir, nous travaillons en circuit court strict, en partenariat direct et équitable avec des producteurs locaux. Cela nous permet de garantir une fraîcheur optimale tout en assurant la prospérité de l'économie régionale. En minimisant les intermédiaires et les distances de transport, nous contribuons activement à la réduction de notre empreinte carbone.</p>
+
+                <!-- Section Valeurs -->
+                <h2>Nos Valeurs</h2>
+                <ul>
+                    <li><strong>Qualité :</strong> Une sélection rigoureuse de chaque produit, basée sur l'expertise de nos équipes et une attention obsessionnelle au goût.</li>
+                    <li><strong>Fraîcheur :</strong> Une sélection rigoureuse de chaque produit, basée sur l'expertise de nos équipes et une attention obsessionnelle au goût.</li>
+                    <li><strong>Durabilité :</strong> Un engagement éthique fort pour l'environnement à travers des pratiques agricoles et logistiques responsables.</li>
+                    <li><strong>Transparence :</strong> Une traçabilité complète de nos produits. L'histoire de votre alimentation, du champ à votre panier, est toujours disponible.</li>
+                </ul>
+
+                <!-- Section Équipe -->
+                <h2>Notre Équipe</h2>
+                <p>Notre force réside dans notre équipe passionnée de 50 collaborateurs. Ce sont des experts formés, dévoués à vous offrir la meilleure expérience d'achat de produits frais. Du choix méticuleux des produits en amont à la livraison, nous sommes là pour vous guider, partager notre expertise et garantir la meilleure qualité.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pop-in Login (identique à index.html) -->
+    <div class="login-overlay" id="loginOverlay">
         <div class="login-popup">
             <button class="close-btn" id="closeBtn">&times;</button>
             <h2>Connexion</h2>
@@ -48,7 +84,8 @@
         </div>
     </div>
 
-    <script>// Gestion du pop-in de login
+    <script>
+        // Gestion du pop-in de login
         const loginBtn = document.getElementById('loginBtn');
         const loginOverlay = document.getElementById('loginOverlay');
         const closeBtn = document.getElementById('closeBtn');
@@ -73,33 +110,5 @@
             loginOverlay.classList.remove('active');
         });
     </script>
-    <main class="about-content">        <!-- Contenu About -->
-        <section class="about-section">
-            <h1>À propos de Fresh Market</h1>
-            
-            <div class="about-image">
-                <img src="media/pictures/image_entreprise.jpg" alt="Notre entreprise">
-            </div>
-
-            <div class="about-text">
-                <h2>Notre Histoire</h2>
-                <p>Depuis 1995, Fresh Market est né d'une conviction simple : l'accès à des fruits et légumes d'une qualité exceptionnelle doit être la norme. Notre histoire est celle d'une passion inébranlable pour le goût vrai et l'agriculture de proximité. Cet engagement historique auprès des produits locaux et de saison n'est pas un simple choix, c'est l'essence même qui nous distingue et qui a bâti la confiance de nos clients depuis plus d'un quart de siècle.</p>
-
-                <h2>Notre Mission</h2>
-                <p>Nous croyons qu'une alimentation saine et durable est essentielle pour l'avenir. Pour y parvenir, nous travaillons en circuit court strict, en partenariat direct et équitable avec des producteurs locaux. Cela nous permet de garantir une fraîcheur optimale tout en assurant la prospérité de l'économie régionale. En minimisant les intermédiaires et les distances de transport, nous contribuons activement à la réduction de notre empreinte carbone.</p>
-
-                <h2>Nos Valeurs</h2>
-                <ul>
-                    <li><strong>Qualité :</strong> Une sélection rigoureuse de chaque produit, basée sur l'expertise de nos équipes et une attention obsessionnelle au goût.</li>
-                    <li><strong>Fraîcheur :</strong> Une sélection rigoureuse de chaque produit, basée sur l'expertise de nos équipes et une attention obsessionnelle au goût.</li>
-                    <li><strong>Durabilité :</strong> Un engagement éthique fort pour l'environnement à travers des pratiques agricoles et logistiques responsables.</li>
-                    <li><strong>Transparence :</strong> Une traçabilité complète de nos produits. L'histoire de votre alimentation, du champ à votre panier, est toujours disponible.</li>
-                </ul>
-
-                <h2>Notre Équipe</h2>
-                <p>Notre force réside dans notre équipe passionnée de 50 collaborateurs. Ce sont des experts formés, dévoués à vous offrir la meilleure expérience d'achat de produits frais. Du choix méticuleux des produits en amont à la livraison, nous sommes là pour vous guider, partager notre expertise et garantir la meilleure qualité.</p>
-            </div>
-        </section>
-    </main>
 </body>
 </html>

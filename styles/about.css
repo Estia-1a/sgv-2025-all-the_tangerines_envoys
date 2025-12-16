@@ -1,0 +1,201 @@
+/* ===== PAGE ABOUT ===== */
+
+/* Conteneur principal du contenu */
+.about-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 60px 50px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Titre principal */
+.about-section h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Conteneur de l'image */
+.about-image {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 50px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Image avec effet de zoom au survol */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Sous-titres des sections */
+.about-text h2 {
+    color: #894b8a;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.about-text h2:first-of-type {
+    margin-top: 0;
+}
+
+/* Paragraphes de texte */
+.about-text p {
+    line-height: 1.9;
+    color: #4a5568;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 1.05rem;
+}
+
+/* Liste des valeurs */
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 30px 0;
+}
+
+.about-text ul li {
+    padding: 18px 0;
+    border-bottom: 1px solid #e8ecef;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+.about-text ul li:last-child {
+    border-bottom: none;
+}
+
+/* Labels des valeurs (Qualité, Fraîcheur, etc.) */
+.about-text ul li strong {
+    color: #894b8a;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.05rem;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablettes */
+@media (max-width: 1024px) {
+    .about-content {
+        padding: 50px 40px;
+    }
+    .about-image {
+        height: 380px;
+    }
+}
+
+/* Tablettes et petits écrans */
+@media (max-width: 768px) {
+    .about-content {
+        width: 95%;
+        padding: 40px 30px;
+        margin: 30px auto;
+        border-radius: 16px;
+    }
+    
+    .about-section h1 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    
+    .about-image {
+        height: 300px;
+        margin-bottom: 40px;
+        border-radius: 12px;
+    }
+    
+    .about-text h2 {
+        font-size: 1.4rem;
+        margin-top: 35px;
+        margin-bottom: 18px;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 22px;
+    }
+    
+    .about-text ul li {
+        font-size: 1rem;
+        padding: 16px 0;
+    }
+    
+    .about-text ul li strong {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+    .about-content {
+        width: 98%;
+        padding: 30px 20px;
+        margin: 20px auto;
+        border-radius: 12px;
+    }
+    
+    .about-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .about-image {
+        height: 220px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    
+    .about-text h2 {
+        font-size: 1.25rem;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin-bottom: 20px;
+    }
+    
+    .about-text ul {
+        margin: 25px 0;
+    }
+    
+    .about-text ul li {
+        font-size: 0.95rem;
+        padding: 14px 0;
+    }
+    
+    /* Sur mobile, les labels passent en bloc */
+    .about-text ul li strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+}
+
