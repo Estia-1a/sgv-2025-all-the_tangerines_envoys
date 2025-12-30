@@ -3,15 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="styles/elt_generique.css">
         <link rel="stylesheet" href="styles/index.css"> 
         <title>Fruits&Veggies*BIO</title>
     </head>
     
     <body>
-
-    
         <nav class="navbar"> <!-- Navigation -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -29,55 +26,55 @@
                 <img src="media/pictures/Baniere3.jpg" alt="Company Banner">
                 <span class="banner-text">FRESH MARKET</span>
             </div>
-            <div class="login-overlay" id="loginOverlay">
-                <div class="login-popup">
-                    <button class="close-btn" id="closeBtn">&times;</button>
-                    <h2>Connexion</h2>
-                    <form class="login-form">
-                        <div class="form-group">
-                            <label for="username">Identifiant</label>
-                            <input type="text" id="username" placeholder="Votre identifiant" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Mot de passe</label>
-                            <input type="password" id="password" placeholder="Votre mot de passe" required>
-                        </div>
-                        <button type="submit" class="submit-btn">Se connecter</button>
-                        <a href="#" class="forgot-link">Mot de passe oublié ?</a>
-                    </form>
-                </div>
+        </header>
+
+
+
+        <div class="login-overlay" id="loginOverlay">
+            <div class="login-popup">
+                <button class="close-btn" id="closeBtn">&times;</button>
+                <h2>Connexion</h2>
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="username">Identifiant</label>
+                        <input type="text" id="username" placeholder="Votre identifiant" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" placeholder="Votre mot de passe" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Se connecter</button>
+                    <a href="#" class="forgot-link">Mot de passe oublié ?</a>
+                </form>
             </div>
+        </div>
 
-            <script>
+        <script>
                         // Gestion du pop-in de login + Code "Compte Fictif"
-                const loginBtn = document.getElementById('loginBtn');
-                const loginOverlay = document.getElementById('loginOverlay');
-                const closeBtn = document.getElementById('closeBtn');
+            const loginBtn = document.getElementById('loginBtn');
+            const loginOverlay = document.getElementById('loginOverlay');
+            const closeBtn = document.getElementById('closeBtn');
 
-                loginBtn.addEventListener('click', () => {
+            loginBtn.addEventListener('click', () => {
                 loginOverlay.classList.add('active');
-                });
+            });
 
-                closeBtn.addEventListener('click', () => {
+            closeBtn.addEventListener('click', () => {
                 loginOverlay.classList.remove('active');
-                });
+            });
 
-                loginOverlay.addEventListener('click', (e) => {
+            loginOverlay.addEventListener('click', (e) => {
                 if (e.target === loginOverlay) {
-                loginOverlay.classList.remove('active');
+                    loginOverlay.classList.remove('active');
                 }
-                });
+            });
 
-                document.querySelector('.login-form').addEventListener('submit', (e) => {
+            document.querySelector('.login-form').addEventListener('submit', (e) => {
                 e.preventDefault();
                 alert('Connexion fictive - Identifiant et mot de passe acceptés');
-                loginOverlay.classList.remove('active');
-                });
-            </script>
-        </header>
-    
-    
-    
+                loginOverlay.classList.remove('active');                
+            });
+        </script>
 
         <div class="main-content"> <!-- Boutons vers pages -->
 
